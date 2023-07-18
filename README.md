@@ -22,4 +22,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Deployment
 
-App is deployed on Vercel and here is the link to access it [https://sql-editor-nu.vercel.app/] (https://sql-editor-nu.vercel.app/).
+App is deployed on Vercel and here is the link to access it [https://sql-editor-nu.vercel.app/](https://sql-editor-nu.vercel.app/).
