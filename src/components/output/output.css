@@ -1,0 +1,33 @@
+.output-container {
+  padding: 24px 36px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-label {
+  padding-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-area {
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.table-cell {
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.table-header-label {
+  text-align: left;
+  background: #f0f0f0;
+  margin-bottom: 24px;
+  padding: 8px;
+  font-size: 14px;
+}

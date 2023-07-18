@@ -3,6 +3,9 @@ import React, { useMemo } from "react";
 import OutputTableHeader from "./outputTableHeader";
 import OutputTableDataRow from "./outputTableDataRow";
 
+import { OUTPUT_LABEL } from "../../utils/constants";
+import "./output.css";
+
 function Output(props) {
   const { queryResults, selectedQueryIndex } = props;
 
@@ -13,20 +16,22 @@ function Output(props) {
   }, [outputData]);
 
   return (
-    <div>
-      Output
-      <table>
-        <OutputTableHeader tableKeys={tableKeys} />
+    <div className="output-container">
+      <div className="output-label">{OUTPUT_LABEL}</div>
 
-        {outputData.map((data, index) => {
-          return (
-            <OutputTableDataRow
-              rowIndex={index}
-              rowData={data}
-              tableKeys={tableKeys}
-            />
-          );
-        })}
+      <table className="table-area">
+        <OutputTableHeader tableKeys={tableKeys} />
+        <tbody>
+          {outputData.map((data, index) => {
+            return (
+              <OutputTableDataRow
+                rowIndex={index}
+                rowData={data}
+                tableKeys={tableKeys}
+              />
+            );
+          })}
+        </tbody>
       </table>
     </div>
   );

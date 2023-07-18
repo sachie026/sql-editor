@@ -1,0 +1,22 @@
+.header-container {
+  padding: 24px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.action-button {
+  margin-left: 12px;
+  background: none;
+  border: 1px solid #d0d0d0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #0556f3;
+  color: white;
+  font-weight: 600;
+}

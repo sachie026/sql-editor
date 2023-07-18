@@ -1,14 +1,22 @@
 import React from "react";
 
+import "./output.css";
+
 function OutputTableHeader(props) {
   const { tableKeys } = props;
 
   return (
-    <tr>
-      {tableKeys.map((key, keyIndex) => {
-        return <th key={keyIndex}>{key}</th>;
-      })}
-    </tr>
+    <thead>
+      <tr>
+        {tableKeys.map((key, keyIndex) => {
+          return (
+            <th key={keyIndex} className="table-header-label">
+              {key}
+            </th>
+          );
+        })}
+      </tr>
+    </thead>
   );
 }
 

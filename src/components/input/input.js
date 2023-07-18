@@ -1,29 +1,31 @@
 import React from "react";
 
+import TabButton from "./tabButton";
+import InputBox from "./inputBox";
+
+import { INPUT_LABEL } from "../../utils/constants";
+import "./input.css";
+
 function Input(props) {
   const { queries, selectedQueryIndex, updateQuerySelection } = props;
 
   return (
-    <>
+    <div className="input-container">
+      <div className="input-label">{INPUT_LABEL}</div>
       <div>
         {queries.map((_query, id) => {
           return (
-            <button key={id} onClick={() => updateQuerySelection(id)}>
-              Query {id}
-            </button>
+            <TabButton
+              key={id}
+              updateQuerySelection={updateQuerySelection}
+              id={id}
+              selectedQueryIndex={selectedQueryIndex}
+            />
           );
         })}
       </div>
-      <div>
-        Input
-        <textarea
-          className="desc"
-          rows="20"
-          value={queries[selectedQueryIndex]}
-          placeholder="Write here..."
-        />
-      </div>
-    </>
+      <InputBox queries={queries} selectedQueryIndex={selectedQueryIndex} />
+    </div>
   );
 }
 
