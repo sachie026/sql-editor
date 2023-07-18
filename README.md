@@ -12,8 +12,10 @@ This is a dummy SQL editor app. It's used to write your sql queries and get the 
 - You can change the layout, whichever suits you the best.
 - You can view the total execution time for the query.
 - You can download the query result as a csv file.
+- Added aria-label property for the actions.
 
 There are other features that can be added once the app is interactive. I have mentioned a few of them in the comments.
+
 We can add a valid way to handle all the exceptions and show the appropiate messages to the user.
 
 ## Tech stack and libraries
