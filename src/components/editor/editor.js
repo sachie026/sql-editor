@@ -5,15 +5,21 @@ import Input from "../input";
 import Output from "../output";
 
 import { queryList, queryResultsList } from "../../data/queryData";
+import "./editor.css";
 
 function Editor() {
   const [inputQueries] = useState([...queryList]);
   const [queryResults] = useState([...queryResultsList]);
   const [selectedQueryIndex, setSelectedQueryIndex] = useState(0);
+  const [layout, setLayout] = useState(1);
 
   const updateQuerySelection = useCallback((index) => {
     setSelectedQueryIndex(index);
   }, []);
+
+  const updateLayout = () => {
+    setLayout(layout === 1 ? 2 : 1); // for now, just 2 layouts are there
+  };
 
   /*
     TO-DO: to make the app header interactive we can implement following methods and pass it to Header component.
@@ -40,16 +46,24 @@ function Editor() {
 
   return (
     <>
-      <Header />
-      <Input
-        queries={inputQueries}
-        selectedQueryIndex={selectedQueryIndex}
-        updateQuerySelection={updateQuerySelection}
-      />
-      <Output
-        queryResults={queryResults}
-        selectedQueryIndex={selectedQueryIndex}
-      />
+      <Header updateLayout={updateLayout} selectedLayout={layout} />
+      <div
+        className={`${
+          layout === 2
+            ? "content-section-row-layout"
+            : "content-section-column-layout"
+        }`}
+      >
+        <Input
+          queries={inputQueries}
+          selectedQueryIndex={selectedQueryIndex}
+          updateQuerySelection={updateQuerySelection}
+        />
+        <Output
+          queryResults={queryResults}
+          selectedQueryIndex={selectedQueryIndex}
+        />
+      </div>
     </>
   );
 }
