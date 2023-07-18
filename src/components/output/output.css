@@ -9,6 +9,7 @@
   padding-bottom: 12px;
   font-size: 16px;
   font-weight: 600;
+  flex: 1;
 }
 
 .table-area {
@@ -30,4 +31,29 @@
   margin-bottom: 24px;
   padding: 8px;
   font-size: 14px;
+}
+
+.output-header-container {
+  display: flex;
+}
+
+.output-header-info {
+  display: flex;
+}
+
+.output-total-rows {
+  margin-right: 24px;
+  font-weight: 600;
+  color: #666;
+}
+
+.output-execution-time {
+  color: #666;
+  margin-right: 24px;
+}
+
+.output-download {
+  font-weight: 600;
+  color: firebrick;
+  cursor: pointer;
 }

@@ -9,10 +9,11 @@ function InputBox(props) {
   return (
     <div>
       <textarea
-        className="input-area "
+        className="input-area"
         rows="10"
         value={queries[selectedQueryIndex]}
         placeholder={INPUT_PLACEHOLDER}
+        onChange={() => {}}
       />
     </div>
   );

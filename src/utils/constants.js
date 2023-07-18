@@ -5,3 +5,7 @@ export const INPUT_LABEL = "Input";
 export const OUTPUT_LABEL = "Output";
 export const TAB_PREFIX = "Query ";
 export const INPUT_PLACEHOLDER = "Write here...";
+export const DOWNLOAD_LABEL = "Download";
+export const EXECUTION_TIME = "Execution time: ";
+export const ROWS_LABEL = "rows";
+export const CSV_FILE_PREFIX = "output-";

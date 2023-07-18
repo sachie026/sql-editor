@@ -2,8 +2,8 @@ import React, { useMemo } from "react";
 
 import OutputTableHeader from "./outputTableHeader";
 import OutputTableDataRow from "./outputTableDataRow";
+import OutputHeader from "./outputHeader";
 
-import { OUTPUT_LABEL } from "../../utils/constants";
 import "./output.css";
 
 function Output(props) {
@@ -17,7 +17,11 @@ function Output(props) {
 
   return (
     <div className="output-container">
-      <div className="output-label">{OUTPUT_LABEL}</div>
+      <OutputHeader
+        outputData={outputData}
+        tableKeys={tableKeys}
+        selectedQueryIndex={selectedQueryIndex}
+      />
 
       <table className="table-area">
         <OutputTableHeader tableKeys={tableKeys} />
@@ -25,6 +29,7 @@ function Output(props) {
           {outputData.map((data, index) => {
             return (
               <OutputTableDataRow
+                key={index}
                 rowIndex={index}
                 rowData={data}
                 tableKeys={tableKeys}
