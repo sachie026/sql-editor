@@ -13,6 +13,7 @@ function OutputDownload(props) {
       <CSVLink
         data={csvDataToDownload}
         className="output-download"
+        aria-label={DOWNLOAD_LABEL}
         filename={`CSV-${CSV_FILE_PREFIX}${selectedQueryIndex}.csv`}
       >
         {DOWNLOAD_LABEL}

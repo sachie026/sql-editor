@@ -17,12 +17,22 @@ function Header(props) {
 
   return (
     <div className="header-container">
-      <button className="action-button">{NEW_QUERY}</button>
-      <button className="action-button">{CLEAR_QUERY}</button>
-      <button className="action-button" onClick={updateLayout}>
+      <button className="action-button" aria-label={NEW_QUERY}>
+        {NEW_QUERY}
+      </button>
+      <button className="action-button" aria-label={CLEAR_QUERY}>
+        {CLEAR_QUERY}
+      </button>
+      <button
+        className="action-button"
+        aria-label={UPDATE_LAYOUT}
+        onClick={updateLayout}
+      >
         {UPDATE_LAYOUT} {selectedLayout}
       </button>
-      <button className="action-button primary-button">{RUN_QUERY}</button>
+      <button className="action-button primary-button" aria-label={RUN_QUERY}>
+        {RUN_QUERY}
+      </button>
     </div>
   );
 }
