@@ -6,6 +6,9 @@ App is deployed on Vercel and here is the link to access it [https://sql-editor-
 
 This is a dummy SQL editor app. It's used to write your sql queries and get the appropriate result/output for that sql query.
 
+The app is devided into three simple sections i.e. header, input and output. The user interface is easy to undestand for the users
+and tried to keep operations/actions at the convenient positions.
+
 ## Features
 
 - You can write and run as many sql queries as possible.
