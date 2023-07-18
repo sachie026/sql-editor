@@ -17,7 +17,7 @@ function Header(props) {
 
   return (
     <div className="header-container">
-      <button className="action-button" aria-label={NEW_QUERY}>
+      <button className="action-button" aria-label={NEW_QUERY} tabIndex={1}>
         {NEW_QUERY}
       </button>
       <button className="action-button" aria-label={CLEAR_QUERY}>
