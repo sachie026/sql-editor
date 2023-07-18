@@ -10,6 +10,11 @@ import "./header.css";
 
 function Header(props) {
   const { updateLayout, selectedLayout } = props;
+
+  /*
+    Instead of new, clear, layout, run label we can use icons as well
+  */
+
   return (
     <div className="header-container">
       <button className="action-button">{NEW_QUERY}</button>
